@@ -53,8 +53,8 @@ function createButtons(lat,lng,title){
     const newButton = document.createElement("button");
     newButton.id = "button"+title;
     newButton.innerHTML = title;
-    newButton.setAttribute("class","step")
-    newButton.setAttribute("data-step",newButton.id)
+    newButton.setAttribute("class","step") // add the class called "step" to the button or div
+    newButton.setAttribute("data-step",newButton.id) // add a data-step for the button id to know which step we are on
     newButton.setAttribute("lat",lat); 
     newButton.setAttribute("lng",lng);
     newButton.addEventListener('click', function(){
@@ -86,7 +86,7 @@ function formatData(theData){
         // use the scrollama scroller variable to set it up
         scroller
         .setup({
-            step: ".step",
+            step: ".step", // this is the name of the class that we are using to step into, it is called "step", not very original
         })
         // do something when you enter a "step":
         .onStepEnter((response) => {
